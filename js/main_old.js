@@ -111,7 +111,7 @@ var myGameArea = {
 }
 
 function boostWeapon(){
-  if(myGamePieceLife < 95){
+  if(myGamePieceLife < 75){
     myObstacles[5] = new componentObstacle(61, 61,  myGameArea.canvas.width, 20, 0, 4, 1, "booster");
     myObstacles[6] = new componentObstacle(100, 80,  myGameArea.canvas.width, 0, 0, 4, 1, "boosterVehicle");
 
@@ -401,7 +401,7 @@ function componentObstacle(width, height, x, y, speedX, speedY, leftOrRight, att
         score = score + 5;
       }
 
-      if(score == 30){
+      if(score == 100){
         myGameArea.stop();
         myGamePieceLifeLine = 3;
         document.getElementById("lifeLineDiv").style.display = "block";
@@ -438,7 +438,7 @@ function componentObstacle(width, height, x, y, speedX, speedY, leftOrRight, att
         }, 3000);
 
       }
-      else if (score == 80){
+      else if (score == 150){
 
         myGameArea.stop();
 
