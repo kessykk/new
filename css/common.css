@@ -1,0 +1,264 @@
+@media only screen and (max-width : 900px){
+  #gameAreaDiv{
+    display:block;
+  }
+  .deviceMsgDiv{
+    display:none;
+  }
+}
+@media only screen and (min-width : 900px){
+  #gameAreaDiv{
+    display:none;
+  }
+  .deviceMsgDiv{
+    display:block;
+  }
+}
+
+@media only screen and (orientation : landscape){
+  .container{
+    display:block;
+  }
+  #msgDiv{
+    display:none;
+  }
+}
+@media only screen and (orientation : portrait){
+  .container{
+    display:none;
+  }
+  #msgDiv{
+    display:block;
+  }
+  #overlayDiv{
+    display:none;
+  }
+}
+/*
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+*/
+
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow:hidden;
+}
+
+#msgDiv{
+  height:100%;
+  width:100%;
+  text-align:center;
+  color:WHITE;
+  position:relative;
+  background-color:BLACK;
+}
+
+.deviceMsgDiv{
+  position:relative;
+  width:100%;
+  height:100%;
+  background-color:BLACK;
+  color:WHITE;
+  font-size:34px;
+  text-align:center;
+}
+
+.container {
+  height:100%;
+  margin:0px;
+  padding:0px;
+  max-width:100%;
+}
+.row{
+  height:100%;
+}
+#overlayDiv{
+  position:relative;
+  left:5%;
+  top:5%;
+  height:90%;
+  width:90%;
+  background-color:rgba(0,0,0,0.5);
+  border:2px solid ORANGE;
+  border-radius: 20px;
+  z-index:500;
+  font-family: Verdana;
+  color:ORANGE;
+  text-align:center;
+}
+#startMsgDiv{
+  position:relative;
+  left:25%;
+  width:50%;height:50%;
+  font-family: Verdana;
+  border:2px solid ORANGE;
+  border-radius: 20px;
+  color: ORANGE;
+  display:none;
+  text-align:center;
+  background-color:rgba(0,0,0,0.5);
+}
+
+#lifeLineDiv{
+  position:relative;
+  top:5%;left:10%;
+  width:80%;height:95%;
+  display:none;
+  text-align:center;
+  border:2px solid ORANGE;border-radius:20px;
+  color:YELLOW;
+  /*background-color:rgba(255,255,255,1);*/
+  background:url("../images/png/pharmacy.png")
+}
+
+#gameAreaDiv{
+  height:100%;
+  position:relative;
+}
+#mainFrame {
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+    background-image:url("../images/png/bkgrnd_forest.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    opacity:0.9;
+}
+#newGamePieceDiv{
+  height:110px;
+  width:60px;
+  position:relative;
+  align-items:center;
+}
+
+.newGamePiece{
+  height:100%;
+  width:100%;
+}
+
+.removePadding{
+  margin-right:0px;
+  margin-left:0px;
+  padding-right:0px;
+  padding-left:0px;
+}
+
+.startBtn {
+   height:50px;
+   position:relative;
+   left:40%;
+   border-radius:20px;
+   display:none;
+}
+.restartBtn{
+  height:50px;
+  border-radius:20px;
+  position:absolute;
+  top:50%;
+  left:40%;
+}
+
+
+.ctrlBtn{
+  height:45px;
+  width:45px;
+  border-radius:30px;
+  opacity:0.75;
+}
+.attackBtn{
+  height:60px;
+  width:60px;
+  border-radius:30px;
+  margin-left: 20px;
+  margin-top: 40px;
+  position:absolute;
+  right:20px;
+  width:70px;
+  opacity:1;
+  bottom:20px;
+  display:none;
+}
+.newGamePieceDivAnim {
+  width: 60px;
+  height: 110px;
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+@keyframes example {
+  from {width: 60px;
+  height:110px;}
+  to {width: 80px;
+  height:130px;}
+}
+
+.winnerFirstAnim {
+  position:relative;
+  animation-name: prizeGiving;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes prizeGiving {
+  from {left:0px;
+  }
+  to {left:130px;
+  }
+}
+
+.winnerFirstPainAnim {
+  position:relative;
+  top: 160px;
+  animation-name: painJump;
+  animation-duration: 300ms;
+}
+
+@keyframes painJump {
+  from {top: 160px;
+  }
+  to {top:0px;
+  }
+}
+
+
+.fontSize{
+  font-size: 1px;
+}
+.smallFontSize{
+  font-size: 0.8em;
+}
+.mediumFontSize{
+  font-size: 1.2em;
+}
+.normalFontSize{
+  font-size: 1em;
+}
+.bigFontSize{
+  font-size: 1.5em;
+}
+.fontColorWhite{
+  color:WHITE;
+}
+.fontColorOrange{
+  color:#f0ad4e;
+}
+.fontColorRed{
+  color:RED;
+}
