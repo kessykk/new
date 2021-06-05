@@ -388,6 +388,10 @@ function componentObstacle(width, height, x, y, speedX, speedY, leftOrRight, att
               if(this.attack == "normal"){
                 this.updateCompPos();
               }
+              else if(this.attack == "attack"){
+                this.x = 0;
+                this.y = 0;
+              }
             }
           }
       }
