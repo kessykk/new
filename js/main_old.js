@@ -24,7 +24,7 @@ window.addEventListener("orientationchange", function(event){
 function openFullscreen(kid) {
   elem = document.getElementById("gameContainerDiv");
   if (elem.requestFullscreen){
-    //elem.requestFullscreen();
+    elem.requestFullscreen();
   } else if (elem.webkitRequestFullScreen) { /* Safari */
     elem.webkitRequestFullScreen();
   } else if (elem.msRequestFullscreen) { /* IE11 */
@@ -459,7 +459,7 @@ function componentObstacle(width, height, x, y, speedX, speedY, leftOrRight, att
         }, 4500);
 
       }
-      else if (score == 200){
+      else if (score == 250){
 
         myGameArea.stop();
 
