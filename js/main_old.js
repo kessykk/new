@@ -297,7 +297,7 @@ function componentObstacle(width, height, x, y, speedX, speedY, leftOrRight, att
       newRandYPos =  0//; //newRandYPos * 40;
 
       var randXPos = getRandomInt(2,8);
-      if(randXPos > 5){
+      if(randXPos <= 5){
         newRandXPos =  randXPos * 100;
         speedX = 2;
         speedY = +1;
@@ -307,7 +307,7 @@ function componentObstacle(width, height, x, y, speedX, speedY, leftOrRight, att
         }
         leftOrRight = 2;
       }
-      if(randXPos <= 5){
+      if(randXPos > 5){
         newRandXPos =  myGameArea.canvas.width;//Math.abs(myGamePiece.x + randXPos * 100);
         speedX = -2;
         speedY = +1;
