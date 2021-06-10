@@ -24,7 +24,7 @@ window.addEventListener("orientationchange", function(event){
 function openFullscreen(kid) {
   elem = document.getElementById("gameContainerDiv");
   if (elem.requestFullscreen){
-    //elem.requestFullscreen();
+    elem.requestFullscreen();
   } else if (elem.webkitRequestFullScreen) { /* Safari */
     elem.webkitRequestFullScreen();
   } else if (elem.msRequestFullscreen) { /* IE11 */
