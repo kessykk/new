@@ -301,7 +301,7 @@ function componentObstacle(width, height, x, y, speedX, speedY, leftOrRight, att
         newRandXPos =  randXPos * 100;
         speedX = 2;
         speedY = +1;
-        if(score >= 150){
+        if(score >= 200){
           speedX = 4;
           speedY = 2;
         }
@@ -311,7 +311,7 @@ function componentObstacle(width, height, x, y, speedX, speedY, leftOrRight, att
         newRandXPos =  myGameArea.canvas.width;//Math.abs(myGamePiece.x + randXPos * 100);
         speedX = -2;
         speedY = +1;
-        if(score >= 150){
+        if(score >= 200){
           speedX = -4;
           speedY = 2
         }
@@ -413,7 +413,7 @@ function componentObstacle(width, height, x, y, speedX, speedY, leftOrRight, att
         score = score + 5;
       }
 
-      if(score == 150){
+      if(score == 200){
         myGameArea.stop();
         myGamePieceLifeLine = 3;
         document.getElementById("lifeLineDiv").style.display = "block";
@@ -459,7 +459,7 @@ function componentObstacle(width, height, x, y, speedX, speedY, leftOrRight, att
         }, 4500);
 
       }
-      else if (score == 270){
+      else if (score == 350){
 
         myGameArea.stop();
 
