@@ -290,30 +290,58 @@ function componentObstacle(width, height, x, y, speedX, speedY, leftOrRight, att
           this.width, this.height);
         }
     }
+this.updateCompPos = function(){
 
-    this.updateCompPos = function(){
+      var randYPos = getRandomInt(1,2);
+      var newRandYPos;
+      
 
-      var newRandYPos = getRandomInt(2,5);
-      newRandYPos =  0//; //newRandYPos * 40;
-
+      if(randYPos == 1){
+        newRandYPos = 0;
+      }
+      else{
+        newRandYPos = myGameArea.canvas.height;        
+      }
+      
       var randXPos = getRandomInt(2,8);
       if(randXPos <= 5){
         newRandXPos =  randXPos * 100;
         speedX = 2;
-        speedY = +1;
-        if(score >= 200){
+        if(newRandYPos == 1){
+          speedY = 1;
+        }
+        else{
+          speedY = -1;
+        }
+        if(score >= 150){
           speedX = 4;
-          speedY = 2;
+          if(newRandYPos == 1){
+            speedY = 2;
+          }
+          else{
+            speedY = -2;
+          }
+        
         }
         leftOrRight = 2;
       }
       if(randXPos > 5){
-        newRandXPos =  myGameArea.canvas.width;//Math.abs(myGamePiece.x + randXPos * 100);
+        newRandXPos =  myGameArea.canvas.width - randXPos*10;//Math.abs(myGamePiece.x + randXPos * 100);
         speedX = -2;
-        speedY = +1;
-        if(score >= 200){
+        if(newRandYPos == 1){
+          speedY = 1;
+        }
+        else{
+          speedY = -1;
+        }
+        if(score >= 150){
           speedX = -4;
-          speedY = 2
+          if(newRandYPos == 1){
+            speedY = 2;
+          }
+          else{
+            speedY = -2;
+          }
         }
         leftOrRight = 1;
       }
@@ -321,7 +349,7 @@ function componentObstacle(width, height, x, y, speedX, speedY, leftOrRight, att
       if(newRandXPos > myGameArea.canvas.width){
         newRandXPos = Math.abs(myGameArea.canvas.width - newRandXPos);
       }
-
+  
       this.x = newRandXPos;
       this.y = newRandYPos;
       this.speedX = speedX;
