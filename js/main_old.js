@@ -307,7 +307,7 @@ this.updateCompPos = function(){
       if(randXPos <= 5){
         newRandXPos =  randXPos * 100;
         speedX = 2;
-        if(newRandYPos == 1){
+        if(newRandYPos == 0){
           speedY = 1;
         }
         else{
@@ -315,7 +315,7 @@ this.updateCompPos = function(){
         }
         if(score >= 150){
           speedX = 4;
-          if(newRandYPos == 1){
+          if(newRandYPos == 0){
             speedY = 2;
           }
           else{
@@ -328,7 +328,7 @@ this.updateCompPos = function(){
       if(randXPos > 5){
         newRandXPos =  myGameArea.canvas.width - randXPos*10;//Math.abs(myGamePiece.x + randXPos * 100);
         speedX = -2;
-        if(newRandYPos == 1){
+        if(newRandYPos == 0){
           speedY = 1;
         }
         else{
@@ -336,7 +336,7 @@ this.updateCompPos = function(){
         }
         if(score >= 150){
           speedX = -4;
-          if(newRandYPos == 1){
+          if(newRandYPos == 0){
             speedY = 2;
           }
           else{
