@@ -306,14 +306,14 @@ this.updateCompPos = function(){
       var randXPos = getRandomInt(2,8);
       if(randXPos <= 5){
         newRandXPos =  randXPos * 100;
-        speedX = 2;
+        speedX = 3;
         if(newRandYPos == 0){
           speedY = 1;
         }
         else{
           speedY = -1;
         }
-        if(score >= 150){
+        if(score >= 250){
           speedX = 4;
           if(newRandYPos == 0){
             speedY = 2;
@@ -327,14 +327,14 @@ this.updateCompPos = function(){
       }
       if(randXPos > 5){
         newRandXPos =  myGameArea.canvas.width - randXPos*10;//Math.abs(myGamePiece.x + randXPos * 100);
-        speedX = -2;
+        speedX = -3;
         if(newRandYPos == 0){
           speedY = 1;
         }
         else{
           speedY = -1;
         }
-        if(score >= 150){
+        if(score >= 250){
           speedX = -4;
           if(newRandYPos == 0){
             speedY = 2;
@@ -441,7 +441,7 @@ this.updateCompPos = function(){
         score = score + 5;
       }
 
-      if(score == 200){
+      if(score == 250){
         myGameArea.stop();
         myGamePieceLifeLine = 3;
         document.getElementById("lifeLineDiv").style.display = "block";
@@ -487,7 +487,7 @@ this.updateCompPos = function(){
         }, 4500);
 
       }
-      else if (score == 350){
+      else if (score == 400){
 
         myGameArea.stop();
 
@@ -665,7 +665,7 @@ function updateGameArea() {
       boosterAudio.play();
 
 
-      myGamePieceLife = myGamePieceLife + 50;
+      myGamePieceLife = myGamePieceLife + 30;
       temp[i].shrink();
 
 
